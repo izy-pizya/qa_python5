@@ -4,7 +4,7 @@ import XPATH
 
 
 # go to sauce
-def test_go_to_sauce(open_hello_window):
+def test_go_to_sauce(driver):
     sauce_button = driver.find_element(By.XPATH, XPATH.sauce_button)
     sauce_button.click()
     assert driver.find_element(By.XPATH, XPATH.selected_element).text == 'Соусы'
@@ -12,7 +12,7 @@ def test_go_to_sauce(open_hello_window):
 
 
 # go to fillings
-def test_go_to_fillings(open_hello_window):
+def test_go_to_fillings(driver):
     fillings_button = driver.find_element(By.XPATH, XPATH.fillings_button)
     fillings_button.click()
     assert driver.find_element(By.XPATH, XPATH.selected_element).text == 'Начинки'
@@ -20,7 +20,7 @@ def test_go_to_fillings(open_hello_window):
 
 
 # go to fillings
-def test_go_to_rolls(open_hello_window):
+def test_go_to_rolls(driver):
     fillings_button = driver.find_element(By.XPATH, XPATH.fillings_button)
     fillings_button.click()
     rolls_button = driver.find_element(By.XPATH, XPATH.rolls_button)
